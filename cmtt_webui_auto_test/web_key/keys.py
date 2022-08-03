@@ -71,7 +71,13 @@ class keys:
             return True
         except:
             return False
-    # def assert_
+
+    def switch_frame(self, name, value, by=None):
+        if by is None:
+            self.driver.switch_to.frame(name)
+        else:
+            self.driver.switch_to.frame(self.locate(by, value))
+
 
 
 
